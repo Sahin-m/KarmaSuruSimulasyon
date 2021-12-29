@@ -1,0 +1,9 @@
+<launch>
+    <arg name="name" default="ugv_1" />
+    <arg name="ugv_cmd_topic" default="/karmasim_node/$(arg name)/ugv_cmd" />
+    <rosparam command="load" file="$(find karmasim_ros_wrapper)/scenarios/scenario_1.yaml" param="scenario"/>
+    <node pkg="karmasim_dev_pkg" type="main_ugv.py" name="contester_ugv_node_$(arg name)"  output="screen" required="true">
+        <param name="uxv_name" type="string" value="$(arg name)" />
+        <remap from="ugv_cmd" to="$(arg ugv_cmd_topic)"/>
+    </node>
+</launch>

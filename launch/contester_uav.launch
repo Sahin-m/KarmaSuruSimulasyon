@@ -1,0 +1,9 @@
+<launch>
+    <arg name="name" default="uav_1" />
+    <arg name="uav_cmd_topic" default="/karmasim_node/$(arg name)/uav_cmd" />
+    <rosparam command="load" file="$(find karmasim_ros_wrapper)/scenarios/scenario_1.yaml" param="scenario"/>
+    <node pkg="karmasim_dev_pkg" type="main_uav.py" name="contester_uav_node_$(arg name)"  output="screen" required="true">
+        <param name="uxv_name" type="string" value="$(arg name)" />
+        <remap from="uav_cmd" to="$(arg uav_cmd_topic)"/>
+    </node>
+</launch>

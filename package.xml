@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>karmasim_dev_pkg</name>
+  <version>1.0.0</version>
+  <description>Provides sample empty project for contesters.</description>
+
+  <maintainer email="info@havelsan.com.tr">HAVELSAN A.Ş.</maintainer>
+
+  <license>MIT</license>
+
+  <url type="repository"></url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_depend>karmasim_ros_wrapper</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>karmasim_ros_wrapper</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+<!--  <depend>rospy</depend>-->
+<!--  <depend>geometry_msgs</depend>-->
+
+</package>
